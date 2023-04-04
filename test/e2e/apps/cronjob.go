@@ -86,7 +86,7 @@ var _ = SIGDescribe("CronJob", func() {
 		ginkgo.By("Removing cronjob")
 		err = deleteCronJob(f.ClientSet, f.Namespace.Name, cronJob.Name)
 		framework.ExpectNoError(err, "Failed to delete CronJob %s in namespace %s", cronJob.Name, f.Namespace.Name)
-	})
+	}),
 
 	/*
 	   Release: v1.21
